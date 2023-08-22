@@ -1,0 +1,60 @@
+.particles {
+  background: #f4f4f4;
+}
+.particles svg {
+  overflow: visible;
+}
+.particles svg path {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.79, 0.705, 0, 1.225);
+          transition-timing-function: cubic-bezier(0.79, 0.705, 0, 1.225);
+}
+.particles__wrapper {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.particles__elem {
+  position: relative;
+  z-index: 1;
+}
+.particles__elem::after {
+  display: block;
+  content: "";
+  width: 180%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: rgba(196, 177, 151, 0.1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.particles__elem::before {
+  display: block;
+  content: "";
+  width: 340%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1.5px solid rgba(196, 177, 151, 0.3);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}

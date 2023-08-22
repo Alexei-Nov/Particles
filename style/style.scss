@@ -1,0 +1,48 @@
+.particles {
+	background: #f4f4f4;
+	& svg {
+		overflow: visible;
+		& path {
+			transition: transform 0.5s;
+			transition-timing-function: cubic-bezier(0.79, 0.705, 0, 1.225);
+		}
+	}
+	&__wrapper {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__elem {
+		position: relative;
+		z-index: 1;
+		&::after {
+			display: block;
+			content: "";
+			width: 180%;
+			height: auto;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			background: rgba(196, 177, 151, 0.1);
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
+		&::before {
+			display: block;
+			content: "";
+			width: 340%;
+			height: auto;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			border: 1.5px solid rgba(196, 177, 151, 0.3);
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
+	}
+}
